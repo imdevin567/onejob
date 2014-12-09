@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>One Job.</title>
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/flick/jquery-ui.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h3>One Job.</h3>
+  </div>
+  <div class="jumbotron">
+    <h2>I have one job.</h2>
+    <p class="lead">I will run your jobs ONCE. I have one job, and only one job.</p>
+    <p>
+      <a href="/job/new" class="btn btn-lg btn-primary">Schedule New Job</a>
+    </p>
+  </div>
+  <%= yield %>
+</div>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>
+  $(document).ready(function() {
+    hljs.initHighlightingOnLoad();
+    $(function() {
+      $("#datepicker").datepicker();
+    });
+    $(".header").click(function() {
+      window.location = "/";
+    });
+  });
+</script>
+</body>
+</html>

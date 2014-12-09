@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Scheduled Jobs</div>
+  <table class="table">
+    <tbody>
+      <th></th>
+      <% @jobs.each do |job| %>
+        <tr>
+          <td><%= job[:id] %></td>
+          <td><%= job[:day] %> <%= job[:month] %> <%= job[:date] %> <%= job[:year] %></td>
+          <td><%= job[:time] %></td>
+          <td><a href="/job/<%= job[:id] %>">View</a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
